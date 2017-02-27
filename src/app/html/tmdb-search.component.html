@@ -1,0 +1,6 @@
+<div id="tmdb-search-component">
+    <input #searchBox list="movies" placeholder="movie title" (keyup)="search(searchBox.value)">
+    <datalist id="movies">
+        <option *ngFor="let movie of movies | async" value="{{movie.title}}">
+    </datalist>
+</div>
