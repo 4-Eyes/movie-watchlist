@@ -1,6 +1,13 @@
-<div id="tmdb-search-component">
-    <input #searchBox list="movies" placeholder="movie title" (keyup)="search(searchBox.value)">
-    <datalist id="movies">
-        <option *ngFor="let movie of movies | async" value="{{movie.title}}">
-    </datalist>
+<div class="container">
+    <div>
+        <input [(ngModel)]="queryString" id="movie-search" class="validate filter-input" (keyup)="search($event)">
+        <label for="movie-search">Movie Title</label>
+    </div>
+    <div class="suggestions" *ngIf="moviesLength > 0 && !selectedMovie">
+        <ul *ngFor="let movie of movies | async;let idx = index">
+            <li [class.complete-selected]="idx == selectedIndex">
+                <a (click)="select(movie, idx)">{{movie.title}}</a>
+            </li>
+        </ul>
+    </div>
 </div>

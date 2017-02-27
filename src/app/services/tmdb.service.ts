@@ -10,7 +10,7 @@ import { UtilityService } from "./utility.service";
 @Injectable()
 export class TMDBService {
     private apiUrl = "https://api.themoviedb.org/3/";
-    private apiKey = "";
+    private apiKey = "098a35b1e31b38fb470a0ae878ca388b";
 
     constructor(private http: Http, private util: UtilityService) {
         //this.apiKey = require("json!./../../../config.json").tmdbApiKey
@@ -27,7 +27,6 @@ export class TMDBService {
             .map((response: any) => {
                 let data = response.json();
                 let results: Movie[] = [];
-                let i = 0;
                 for (let result of data.results) {
                     results.push(this.util.tmdbResultToMovie(result));
                 }

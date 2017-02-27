@@ -11,13 +11,15 @@ import { UtilityService } from "./services/utility.service";
 import { TMDBService } from "./services/tmdb.service";
 import { TMDBSearchComponent } from "./tmdb-search.component";
 import { HttpModule } from "@angular/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule(
     {
         imports: [
             BrowserModule,
             //RoutingModule,
-            HttpModule
+            HttpModule,
+            FormsModule
         ],
         declarations: [
             AppComponent,

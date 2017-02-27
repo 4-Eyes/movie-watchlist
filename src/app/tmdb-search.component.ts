@@ -23,22 +23,43 @@ import { TMDBService } from "./services/tmdb.service";
 export class TMDBSearchComponent implements OnInit {
     movies: Observable<Movie[]>;
     private searchTerms = new Subject<string>();
-    selectedMovie: Movie;
+    selectedMovie: Movie = null;
+    selectedIndex: number = -1;
+    moviesLength = 0;
+    queryString: string = "";
 
     constructor(private tmdbService: TMDBService) {}
 
-    search(term: string): void {
-        this.searchTerms.next(term);
+    search(event: any): void {
+        if (event.code === "ArrowDown" && this.selectedIndex < this.moviesLength) {
+            this.selectedIndex++;
+        } else if (event.code === "ArrowUp" && this.selectedIndex > 0) {
+            this.selectedIndex--;
+        } else {
+            this.selectedMovie = null;
+            this.searchTerms.next(this.queryString);
+        }
     }
 
     ngOnInit(): void {
-        this.movies = this.searchTerms
+        this.searchTerms
             .debounceTime(200)
             .distinctUntilChanged()
             .switchMap(term => term ? this.tmdbService.search(term) : Observable.of<Movie[]>([]))
-            .catch(error => {
-                console.error(error);
-                return Observable.of<Movie[]>([]);
+            // .catch(error => {
+            //     console.log(error);
+            //     this.movies = Observable.of<Movie[]>([]);
+            //     return null;
+            // })
+            .subscribe(list => {
+                this.moviesLength = list.length;
+                this.movies = Observable.of<Movie[]>(list);
             });
+    }
+
+    select(movie: Movie, index: number): void {
+        this.queryString = movie.title;
+        this.selectedMovie = movie;
+        this.selectedIndex = index;
     }
 }
