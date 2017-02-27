@@ -1,6 +1,6 @@
 <div class="container">
-    <div>
-        <input [(ngModel)]="queryString" id="movie-search" class="validate filter-input" (keyup)="search($event)">
+    <div class="input-field col s12">
+        <input [(ngModel)]="queryString" type="text" id="movie-search" class="validate filter-input" (keyup)="search($event)">
         <label for="movie-search">Movie Title</label>
     </div>
     <div class="suggestions" *ngIf="moviesLength > 0 && !selectedMovie">

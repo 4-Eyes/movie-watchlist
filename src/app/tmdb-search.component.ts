@@ -16,7 +16,8 @@ import { TMDBService } from "./services/tmdb.service";
     {
         moduleId: module.id,
         selector: "tmdb-search",
-        templateUrl: './html/tmdb-search.component.html'
+        templateUrl: './html/tmdb-search.component.html',
+        styleUrls: [ './css/tmdb-search.component.css']
     }
 )
 
