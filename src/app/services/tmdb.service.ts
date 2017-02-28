@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, OnInit } from "@angular/core";
 import { Http, URLSearchParams } from "@angular/http";
 
 import { Observable } from "rxjs/Observable";
@@ -10,10 +10,11 @@ import { UtilityService } from "./utility.service";
 @Injectable()
 export class TMDBService {
     private apiUrl = "https://api.themoviedb.org/3/";
-    private apiKey = "098a35b1e31b38fb470a0ae878ca388b";
+    private apiKey = "";
 
     constructor(private http: Http, private util: UtilityService) {
-        //this.apiKey = require("json!./../../../config.json").tmdbApiKey
+        this.util.loadJson("./config.json")
+            .subscribe(configData => this.apiKey = configData.tmdbApiKey);
     }
 
     search(query: string): Observable<Movie[]> {
@@ -33,4 +34,6 @@ export class TMDBService {
                 return results;
             });
     }
+
+
 }

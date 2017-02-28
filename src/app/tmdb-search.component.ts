@@ -47,11 +47,6 @@ export class TMDBSearchComponent implements OnInit {
             .debounceTime(200)
             .distinctUntilChanged()
             .switchMap(term => term ? this.tmdbService.search(term) : Observable.of<Movie[]>([]))
-            // .catch(error => {
-            //     console.log(error);
-            //     this.movies = Observable.of<Movie[]>([]);
-            //     return null;
-            // })
             .subscribe(list => {
                 this.moviesLength = list.length;
                 this.movies = Observable.of<Movie[]>(list);
