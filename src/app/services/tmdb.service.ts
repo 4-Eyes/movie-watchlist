@@ -55,8 +55,4 @@ export class TMDBService {
             .get(url, { search: queryParams })
             .map(response => this.util.tmdbResultToMovie(response.json()))
     }
-
-    constructPosterUrl(movie: Movie): string {
-
-    }
 }
