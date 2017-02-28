@@ -4,11 +4,10 @@ import { Http } from "@angular/http";
 
 import 'rxjs/add/operator/toPromise';
 import { Observable } from "rxjs";
+import { TMDBConfig } from "../models/tmdb-config";
 
 @Injectable()
 export class UtilityService {
-
-    private posterUrl = "https://image.tmdb.org/t/p/original";
 
     constructor(private http: Http) {
     }
@@ -18,7 +17,8 @@ export class UtilityService {
         movie.id = result.id;
         movie.releaseYear = result.release_date;
         movie.title = result.title;
-        movie.posterUrl = result.poster_path ? this.posterUrl + result.poster_path : null;
+        movie.posterUrl = result.poster_path ? result.poster_path : null;
+        movie.imdbId = result.imdb_id ? result.imdb_id : null;
         return movie;
     }
 
@@ -26,5 +26,12 @@ export class UtilityService {
         return this.http
             .get(path)
             .map(res => res.json());
+    }
+
+    tmdbConfigParser(result: any): TMDBConfig {
+        let config = new TMDBConfig();
+        config.imageBaseUrl = result.images.secure_base_url;
+        config.posterSizes = result.images.poster_sizes;
+        return config;
     }
 }

@@ -6,7 +6,15 @@
     <div class="suggestions" *ngIf="moviesLength > 0 && !selectedMovie">
         <ul *ngFor="let movie of movies | async;let idx = index">
             <li [class.complete-selected]="idx == selectedIndex">
-                <a (click)="select(movie, idx)">{{movie.title}}</a>
+                <a class="left-align" (click)="select(movie, idx)">
+                    <span class="movie_title">{{movie.title}}</span>
+                    <div *ngIf="movie.posterUrl" class="right">
+                        <img src="{{tmdbService.tmdbConfig.imageBaseUrl + tmdbService.tmdbConfig.posterSizes[0] + movie.posterUrl}}">
+                    </div>
+                    <div *ngIf="!movie.posterUrl" class="right no_image">
+                        <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    </div>
+                </a>
             </li>
         </ul>
     </div>
