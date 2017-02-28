@@ -21,7 +21,11 @@
 }
 
 .suggestions ul li a {
-    padding: 5px;
+    /*padding: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 15px;
     display: block;
     text-decoration: none;
     vertical-align: middle;
@@ -40,10 +44,6 @@ img {
 .no_image {
     height: 70px;
     width: 47px;
-    text-align: center;
-    background-color: #dbdbdb;
-    color: #b5b5b5;
-    box-sizing: border-box;
 }
 
 .fa-picture-o {

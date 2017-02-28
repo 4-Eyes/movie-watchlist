@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Movie } from "./models/movie";
+import { TMDBService } from "./services/tmdb.service";
 
 @Component(
     {
@@ -10,4 +11,7 @@ import { Movie } from "./models/movie";
 )
 export class MovieDetailComponent {
     movie: Movie;
+    editMode = false;
+
+    constructor(private tmdbService: TMDBService) {}
 }

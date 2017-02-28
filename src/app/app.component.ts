@@ -4,9 +4,10 @@ import { Component } from '@angular/core';
     {
         moduleId: module.id,
         selector: 'app',
-        templateUrl: './html/app.component.html'
+        templateUrl: './html/app.component.html',
+        styleUrls: ['./css/app.component.css']
     }
 )
 export class AppComponent {
-    title: "Watchlist"
+    title = "Watchlist";
 }
