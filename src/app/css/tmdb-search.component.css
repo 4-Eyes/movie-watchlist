@@ -6,8 +6,8 @@
 }
 
 .suggestions ul {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
@@ -16,16 +16,12 @@
 
 .suggestions ul li {
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .suggestions ul li a {
-    /*padding: 5px;*/
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 15px;
+    padding: 5px 15px 5px 20px;
     display: block;
     text-decoration: none;
     vertical-align: middle;
