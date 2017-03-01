@@ -1,4 +1,20 @@
-<div>
-    <label>{{movie.title}}</label>
-    <img src="{{movie.posterUrl}}">
+<div class="container">
+    <div class="col s6">
+        <div class="card horizontal">
+            <div class="card-image">
+                <img *ngIf="movie.posterUrl" src="{{tmdbService.generatePosterUrl(movie, 0)}}">
+                <div *ngIf="!movie.posterUrl" class="no_image">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p>{{movie.title}} ({{movie.releaseDate.getFullYear()}})</p>
+                </div>
+                <div class="card-action">
+                    <a>Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

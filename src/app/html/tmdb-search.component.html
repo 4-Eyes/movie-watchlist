@@ -9,7 +9,7 @@
                 <a class="left-align" (click)="select(movie, idx)">
                     <span class="movie_title">{{movie.title}}</span>
                     <div *ngIf="movie.posterUrl" class="right">
-                        <img src="{{tmdbService.tmdbConfig.imageBaseUrl + tmdbService.tmdbConfig.posterSizes[0] + movie.posterUrl}}">
+                        <img src="{{tmdbService.generatePosterUrl(movie, 0)}}">
                     </div>
                     <div *ngIf="!movie.posterUrl" class="right no_image">
                         <i class="fa fa-picture-o" aria-hidden="true"></i>

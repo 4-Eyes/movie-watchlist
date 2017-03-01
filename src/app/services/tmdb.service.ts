@@ -55,4 +55,9 @@ export class TMDBService {
             .get(url, { search: queryParams })
             .map(response => this.util.tmdbResultToMovie(response.json()))
     }
+
+    generatePosterUrl(movie: Movie, posterSize: number): string {
+        if (!this.tmdbConfig) return;
+        return this.tmdbConfig.imageBaseUrl + this.tmdbConfig.posterSizes[posterSize] + movie.posterUrl
+    }
 }

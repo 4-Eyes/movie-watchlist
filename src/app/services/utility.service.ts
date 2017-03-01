@@ -15,7 +15,7 @@ export class UtilityService {
     tmdbResultToMovie(result: any): Movie {
         let movie = new Movie();
         movie.id = result.id;
-        movie.releaseYear = result.release_date;
+        movie.releaseDate = result.release_date;
         movie.title = result.title;
         movie.posterUrl = result.poster_path ? result.poster_path : null;
         movie.imdbId = result.imdb_id ? result.imdb_id : null;
