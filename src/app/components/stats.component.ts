@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     {
         moduleId: module.id,
         selector: 'stats',
-        templateUrl: './html/stats.component.html'
+        templateUrl: './../html/stats.component.html'
     }
 )
 export class StatsComponent {

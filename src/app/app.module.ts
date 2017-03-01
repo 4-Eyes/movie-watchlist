@@ -1,40 +1,39 @@
-import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { AppComponent }  from './app.component';
-import { MovieComponent }from './movie.component';
-import { RoutingModule } from "./routing.module";
-import { MovieDetailComponent } from "./movie-detail.component";
-import { WatchListComponent } from "./watchlist.component";
-import { StatsComponent } from "./stats.component";
+import { MaterializeModule } from "angular2-materialize";
+
+import { AppComponent } from './components/app.component';
+import { TMDBSearchComponent } from "./components/tmdb-search.component";
+import { MovieDetailComponent } from "./components/movie-detail.component";
+import { WatchListComponent } from "./components/watchlist.component";
+import { StatsComponent } from "./components/stats.component";
+import { MovieComponent }from './components/movie.component';
+
 import { UtilityService } from "./services/utility.service";
 import { TMDBService } from "./services/tmdb.service";
-import { TMDBSearchComponent } from "./tmdb-search.component";
-import { HttpModule } from "@angular/http";
-import {FormsModule} from "@angular/forms";
 
-@NgModule(
-    {
-        imports: [
-            BrowserModule,
-            //RoutingModule,
-            HttpModule,
-            FormsModule
-        ],
-        declarations: [
-            AppComponent,
-            MovieComponent,
-            MovieDetailComponent,
-            WatchListComponent,
-            StatsComponent,
-            TMDBSearchComponent
-        ],
-        providers: [
-            UtilityService,
-            TMDBService
-        ],
-        bootstrap: [AppComponent]
-    }
-)
-export class AppModule {
-}
+@NgModule({
+  declarations: [
+    AppComponent,
+    MovieComponent,
+    MovieDetailComponent,
+    WatchListComponent,
+    StatsComponent,
+    TMDBSearchComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    MaterializeModule
+  ],
+  providers: [
+    UtilityService,
+    TMDBService
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

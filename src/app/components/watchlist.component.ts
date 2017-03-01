@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
     {
         moduleId: module.id,
         selector: 'watchlist',
-        templateUrl: './html/watchlist.component.html'
+        templateUrl: './../html/watchlist.component.html'
     }
 )
 export class WatchListComponent {

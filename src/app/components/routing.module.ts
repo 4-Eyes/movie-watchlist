@@ -1,8 +1,8 @@
 import { Routes, RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
-import { MovieDetailComponent } from "./movie-detail.component";
-import { StatsComponent } from "./stats.component";
-import { WatchListComponent } from "./watchlist.component";
+import { MovieDetailComponent } from "./../components/movie-detail.component";
+import { StatsComponent } from "./../components/stats.component";
+import { WatchListComponent } from "./../components/watchlist.component";
 
 const routes: Routes = [
     { path: '', redirectTo: '/watchlist', pathMatch: 'full' },

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Movie } from "./models/movie";
+import { Movie } from "./../models/movie";
 
 @Component(
     {
         moduleId: module.id,
         selector: 'movie',
-        templateUrl: './html/movie.component.html'
+        templateUrl: './../html/movie.component.html'
     }
 )
 export class MovieComponent {
