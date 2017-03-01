@@ -7,4 +7,5 @@ export class Movie {
     viewings: Viewing[];
     posterUrl: string;
     releaseDate: Date;
+    overview: string;
 }

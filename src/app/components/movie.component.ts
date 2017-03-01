@@ -6,7 +6,8 @@ import { TMDBService } from "../services/tmdb.service";
     {
         moduleId: module.id,
         selector: 'movie',
-        templateUrl: './../html/movie.component.html'
+        templateUrl: './../html/movie.component.html',
+        styleUrls: ['./../css/movie.component.css']
     }
 )
 export class MovieComponent {
@@ -15,6 +16,6 @@ export class MovieComponent {
     constructor(private tmdbService: TMDBService) {
         this.movie.title = "Inception";
         this.movie.releaseDate = new Date("2010-07-14");
-        this.movie.posterUrl = "/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg";
+        // this.movie.posterUrl = "/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg";
     }
 }
