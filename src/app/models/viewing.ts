@@ -4,5 +4,5 @@ export class Viewing {
     id: number;
     date: Date;
     cinema: Cinema;
-    rewatch: true;
+    rewatch: boolean;
 }

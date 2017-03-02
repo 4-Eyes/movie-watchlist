@@ -1,4 +1,7 @@
 import { Component } from "@angular/core";
+import { Movie } from "../models/movie";
+import { Observable } from "rxjs";
+import { DataService } from "../services/data.service";
 
 @Component(
     {
@@ -8,5 +11,8 @@ import { Component } from "@angular/core";
     }
 )
 export class WatchListComponent {
+    movies: Observable<Movie[]>;
 
+    constructor(private dataService: DataService) {
+    }
 }

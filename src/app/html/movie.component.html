@@ -1,19 +1,24 @@
 <div class="container">
-    <div class="col s6">
-        <div class="card horizontal">
-            <div class="card-image">
-                <img *ngIf="movie.posterUrl" src="{{tmdbService.generatePosterUrl(movie, 0)}}">
-                <div *ngIf="!movie.posterUrl" class="no_image">
+    <div class="col s4">
+        <div class="card horizontal movie-card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" *ngIf="movie.posterUrl && tmdbService.generatePosterUrl(movie, 1)" src="{{tmdbService.generatePosterUrl(movie, 1)}}">
+                <div *ngIf="!movie.posterUrl || !tmdbService.generatePosterUrl(movie, 1)" class="no-image activator">
                     <i class="fa fa-picture-o" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="card-stacked">
                 <div class="card-content">
-                    <p>{{movie.title}} ({{movie.releaseDate.getFullYear()}})</p>
+                    <span class="card-title">{{movie.title}} ({{movie.releaseDate.getFullYear()}})</span>
+                    <p>You have watched this film {{movie.viewings.length}} time{{movie.viewings.length == 0 ? "" : "s"}}</p>
                 </div>
                 <div class="card-action">
                     <a>Details</a>
                 </div>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{movie.title}} ({{movie.releaseDate.getFullYear()}})<i class="material-icons right">close</i></span>
+                <p>{{movie.overview}}</p><!--<span class="card-title"></span>-->
             </div>
         </div>
     </div>
