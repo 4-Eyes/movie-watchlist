@@ -1,2 +1,4 @@
-<h2>Watchlist</h2>
-<
+<!--<h2>Watchlist</h2>-->
+<div *ngFor="let movie of movies | async">
+    <movie-card [movie]="movie"></movie-card>
+</div>

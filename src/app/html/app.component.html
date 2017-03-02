@@ -3,14 +3,14 @@
         <div class="nav-wrapper">
             <a class="brand-logo">{{title}}</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a>Watchlist</a></li>
-                <li><a>Stats</a></li>
+                <li routerLinkActive="active"><a routerLink="/watchlist">Watchlist</a></li>
+                <li routerLinkActive="active"><a routerLink="/stats">Stats</a></li>
             </ul>
         </div>
     </nav>
 </header>
 <main>
-    <movie-card></movie-card>
+    <router-outlet></router-outlet>
 </main>
 <footer>
 

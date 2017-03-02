@@ -14,5 +14,6 @@ export class WatchListComponent {
     movies: Observable<Movie[]>;
 
     constructor(private dataService: DataService) {
+        this.movies = dataService.getWatchlist();
     }
 }

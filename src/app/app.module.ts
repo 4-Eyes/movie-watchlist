@@ -14,26 +14,33 @@ import { MovieComponent }from './components/movie.component';
 
 import { UtilityService } from "./services/utility.service";
 import { TMDBService } from "./services/tmdb.service";
+import { DataService } from "./services/data.service";
+import { AppRoutingModule } from "./routing/app-routing.module";
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    MovieComponent,
-    MovieDetailComponent,
-    WatchListComponent,
-    StatsComponent,
-    TMDBSearchComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    MaterializeModule
-  ],
-  providers: [
-    UtilityService,
-    TMDBService
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+@NgModule(
+    {
+        declarations: [
+            AppComponent,
+            MovieComponent,
+            MovieDetailComponent,
+            WatchListComponent,
+            StatsComponent,
+            TMDBSearchComponent
+        ],
+        imports: [
+            BrowserModule,
+            FormsModule,
+            HttpModule,
+            MaterializeModule,
+            AppRoutingModule
+        ],
+        providers: [
+            UtilityService,
+            TMDBService,
+            DataService
+        ],
+        bootstrap: [AppComponent]
+    }
+)
+export class AppModule {
+}
