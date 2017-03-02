@@ -7,7 +7,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2008-07-16"),
         posterUrl: "/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg",
         title: "The Dark Knight",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 49026,
@@ -16,7 +30,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2012-07-16"),
         posterUrl: "/dEYnvnUfXrqvqeRSqvIEtmzhoA8.jpg",
         title: "The Dark Knight Rises",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 120,
@@ -25,7 +53,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2001-12-18"),
         posterUrl: "/bxVxZb5O9OxCO0oRUNdCnpy9NST.jpg",
         title: "The Lord of the Rings: The Fellowship of the Ring",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 603,
@@ -34,7 +76,60 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("1999-03-30"),
         posterUrl: "/lZpWprJqbIFpEV5uoHfoK0KCnTW.jpg",
         title: "The Matrix",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 122,
@@ -43,7 +138,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2003-12-01"),
         posterUrl: "/50LoR9gJhbWZ5PpoHgi8MNTYgzd.jpg",
         title: "The Lord of the Rings: The Return of the King",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 1726,
@@ -52,7 +161,34 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2008-04-30"),
         posterUrl: "/s2IG9qXfhJYxIttKyroYFBsHwzQ.jpg",
         title: "Iron Man",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 121,
@@ -61,7 +197,47 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2002-12-18"),
         posterUrl: "/5o5fv1dHG7vWoH2hmqwihVPBoBm.jpg",
         title: "The Lord of the Rings: The Two Towers",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 272,
@@ -70,7 +246,47 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2005-06-14"),
         posterUrl: "/dr6x4GyyegBWtinPBzipY02J2lV.jpg",
         title: "Batman Begins",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 19995,
@@ -79,7 +295,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2009-12-10"),
         posterUrl: "/kmcqlZGaSh20zpTbuoF0Cdn07dT.jpg",
         title: "Avatar",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 10138,
@@ -88,7 +318,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2010-04-28"),
         posterUrl: "/ArqpkNYGfcTIA6umWt6xihfIZZv.jpg",
         title: "Iron Man 2",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 10528,
@@ -97,7 +341,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2009-01-07"),
         posterUrl: "/22ngurXbLqab7Sko6aTSdwOCe5W.jpg",
         title: "Sherlock Holmes",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 59967,
@@ -106,7 +364,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2012-09-26"),
         posterUrl: "/o4qXZMrZlfuTfwwNGMyTcx6p2uO.jpg",
         title: "Looper",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 24428,
@@ -115,7 +387,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2012-04-25"),
         posterUrl: "/cezWGskPY5x7GaglTTRN4Fugfb8.jpg",
         title: "The Avengers",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 550,
@@ -124,7 +410,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("1999-10-15"),
         posterUrl: "/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg",
         title: "Fight Club",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 37724,
@@ -133,7 +433,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2012-10-25"),
         posterUrl: "/lQCkPLDxFONmgzrWLvq085v1g2d.jpg",
         title: "Skyfall",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 11324,
@@ -142,7 +456,34 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2010-02-18"),
         posterUrl: "/aZqKsvpJDFy2UzUMsdskNFbfkOd.jpg",
         title: "Shutter Island",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 680,
@@ -151,7 +492,21 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("1994-10-13"),
         posterUrl: "/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
         title: "Pulp Fiction",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     },
     {
         id: 70160,
@@ -160,7 +515,60 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2012-03-12"),
         posterUrl: "/iLJdwmzrHFjFwI5lvYAT1gcpRuA.jpg",
         title: "The Hunger Games",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 1,
+                date: new Date("2016-08-10"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: true
+            },
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+            {
+                id: 1,
+                date: new Date("2016-08-10"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: true
+            },
+        ]
     },
     {
         id: 70981,
@@ -169,7 +577,34 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2012-05-30"),
         posterUrl: "/sRbTWQn9Djs0wW8k3nkUun5ZBnt.jpg",
         title: "Prometheus",
-        viewings: []
+        viewings: [
+            {
+                    id: 0,
+                    date: new Date("2016-07-21"),
+                    cinema: {
+                        id: 0,
+                        name: "Readings The Palms",
+                        location: {
+                            latitude: -43.5073936,
+                            longitude: 172.6618957,
+                        }
+                    },
+                    rewatch: false
+                },
+                {
+                    id: 1,
+                    date: new Date("2016-08-10"),
+                    cinema: {
+                        id: 0,
+                        name: "Readings The Palms",
+                        location: {
+                            latitude: -43.5073936,
+                            longitude: 172.6618957,
+                        }
+                    },
+                    rewatch: true
+                },
+        ]
     },
     {
         id: 1771,
@@ -178,6 +613,20 @@ export const WATCHLIST: Movie[] = [
         releaseDate: new Date("2011-07-22"),
         posterUrl: "/dlIPGXPxXQTp9kFrRzn0RsfUelx.jpg",
         title: "Captain America: The First Avenger",
-        viewings: []
+        viewings: [
+            {
+                id: 0,
+                date: new Date("2016-07-21"),
+                cinema: {
+                    id: 0,
+                    name: "Readings The Palms",
+                    location: {
+                        latitude: -43.5073936,
+                        longitude: 172.6618957,
+                    }
+                },
+                rewatch: false
+            },
+        ]
     }
 ];
