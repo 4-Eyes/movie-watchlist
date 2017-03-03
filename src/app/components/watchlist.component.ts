@@ -20,7 +20,7 @@ export class WatchListComponent {
 
     modalActions = new EventEmitter<string|MaterializeAction>();
 
-    addMovie(event): void {
+    addMovie(): void {
         //Add the movie/do validation
         this.modalActions.emit({action:"modal", params:['close']});
     }

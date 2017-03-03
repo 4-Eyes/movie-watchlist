@@ -27,7 +27,7 @@ class DataRepository {
     };
 
     getMovie(id, callback) {
-        Movie.findById(id, callback)
+        Movie.findById(id)
             .populate("viewings.cinema")
             .exec(callback);
     };

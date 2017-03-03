@@ -9,16 +9,24 @@ import { WATCHLIST } from "./data";
 
 @Injectable()
 export class DataService {
-    private apiUrl = "";
+    private apiUrl = "http://localhost:3000/api/";
 
     constructor(private http: Http, private util: UtilityService) {
     }
 
     getWatchlist(): Observable<Movie[]> {
-        return Observable.of<Movie[]>(WATCHLIST);
+        return this.http.get(this.apiUrl + "movies")
+            .map((movies: any) => {
+                let res: Movie[] = [];
+                for (let movie of movies.json()) {
+                    res.push(this.util.apiToMovie(movie));
+                }
+                return res;
+            });
     }
 
     getMovie(movieId: number): Observable<Movie> {
-        return Observable.of<Movie>(WATCHLIST.filter(movie => movie._id === movieId).pop());
+        return this.http.get(this.apiUrl + "movie/" + movieId)
+            .map((movie: any) => this.util.apiToMovie(movie.json()));
     }
 }

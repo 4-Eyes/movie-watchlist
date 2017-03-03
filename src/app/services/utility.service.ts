@@ -34,4 +34,10 @@ export class UtilityService {
         config.posterSizes = result.images.poster_sizes;
         return config;
     }
+
+    apiToMovie(apiMovie: any): Movie {
+        let movie = apiMovie as Movie;
+        movie.releaseDate = new Date(apiMovie.releaseDate);
+        return movie;
+    }
 }
