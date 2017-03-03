@@ -15,7 +15,7 @@ export class TMDBService {
     public tmdbConfig: TMDBConfig;
 
     constructor(private http: Http, private util: UtilityService) {
-        this.util.loadJson("./src/config.json")
+        this.util.loadJson("./config.json")
             .subscribe(configData => {
                 this.defaultQueryParams.set("api_key", configData.tmdbApiKey);
                 this.defaultQueryParams.set("language", "en-UK");
