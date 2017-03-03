@@ -3,6 +3,7 @@ import { Movie } from "./../models/movie";
 import { TMDBService } from "./../services/tmdb.service";
 import { ActivatedRoute, Params } from "@angular/router";
 import { DataService } from "../services/data.service";
+import {Observable} from "rxjs";
 
 @Component(
     {
@@ -21,7 +22,9 @@ export class MovieDetailComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.params
-            .switchMap((params: Params) => this.dataService.getMovie(+params['id']))
+            .switchMap((params: Params) => {
+                return this.dataService.getMovie(+params['id']);
+            })
             .subscribe(movie => this.movie = movie);
     }
 }

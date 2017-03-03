@@ -5,6 +5,7 @@ import { Http } from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 import { Observable } from "rxjs";
 import { TMDBConfig } from "../models/tmdb-config";
+import {Cinema} from "../models/cinema";
 
 @Injectable()
 export class UtilityService {
@@ -39,5 +40,23 @@ export class UtilityService {
         let movie = apiMovie as Movie;
         movie.releaseDate = new Date(apiMovie.releaseDate);
         return movie;
+    }
+
+    movieToApi(movie: Movie): any {
+        let api = this.clone(movie);
+        for (var viewing of api.viewings) {
+            viewing.cinema = viewing.cinema._id;
+        }
+        return api;
+    }
+
+    clone(obj: any): any {
+        return Object.assign({},obj);
+    }
+
+    cinemaToApi(cinema: Cinema): any {
+        let api = this.clone(cinema);
+        delete api._id;
+        return api;
     }
 }
