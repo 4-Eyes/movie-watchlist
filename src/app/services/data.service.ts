@@ -29,4 +29,8 @@ export class DataService {
         return this.http.get(this.apiUrl + "movie/" + movieId)
             .map((movie: any) => this.util.apiToMovie(movie.json()));
     }
+
+    createMovie(movie: Movie): Observable<any> {
+        return this.http.post(this.apiUrl + "movies", movie);
+    }
 }

@@ -2,6 +2,6 @@ import { GeoLocation } from "./geolocation";
 
 export class Cinema {
     name: string;
-    id: number;
+    _id: number;
     location: GeoLocation;
 }

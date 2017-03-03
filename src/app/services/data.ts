@@ -12,11 +12,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -35,11 +35,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -58,11 +58,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -81,11 +81,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -94,11 +94,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -107,11 +107,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -120,11 +120,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -143,11 +143,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -166,11 +166,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -179,11 +179,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -202,11 +202,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -215,11 +215,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -228,11 +228,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -251,11 +251,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -264,11 +264,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -277,11 +277,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -300,11 +300,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -323,11 +323,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -346,11 +346,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -369,11 +369,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -392,11 +392,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -415,11 +415,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -438,11 +438,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -461,11 +461,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -474,11 +474,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -497,11 +497,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -520,11 +520,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -533,11 +533,11 @@ export const WATCHLIST: Movie[] = [
                 id: 1,
                 date: new Date("2016-08-10"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: true
@@ -546,11 +546,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false
@@ -559,11 +559,11 @@ export const WATCHLIST: Movie[] = [
                 id: 1,
                 date: new Date("2016-08-10"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: true
@@ -582,11 +582,11 @@ export const WATCHLIST: Movie[] = [
                     id: 0,
                     date: new Date("2016-07-21"),
                     cinema: {
-                        id: 0,
+                        _id: 0,
                         name: "Readings The Palms",
                         location: {
-                            latitude: -43.5073936,
-                            longitude: 172.6618957,
+                            latitude: 0,
+                            longitude: 0,
                         }
                     },
                     rewatch: false
@@ -595,11 +595,11 @@ export const WATCHLIST: Movie[] = [
                     id: 1,
                     date: new Date("2016-08-10"),
                     cinema: {
-                        id: 0,
+                        _id: 0,
                         name: "Readings The Palms",
                         location: {
-                            latitude: -43.5073936,
-                            longitude: 172.6618957,
+                            latitude: 0,
+                            longitude: 0,
                         }
                     },
                     rewatch: true
@@ -618,11 +618,11 @@ export const WATCHLIST: Movie[] = [
                 id: 0,
                 date: new Date("2016-07-21"),
                 cinema: {
-                    id: 0,
+                    _id: 0,
                     name: "Readings The Palms",
                     location: {
-                        latitude: -43.5073936,
-                        longitude: 172.6618957,
+                        latitude: 0,
+                        longitude: 0,
                     }
                 },
                 rewatch: false

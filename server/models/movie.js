@@ -12,7 +12,7 @@ const movieSchema = new Schema(
         viewings: [
             {
                 date: Date,
-                cinema: { type: Schema.Types.ObjectId, ref: 'Cinema' },
+                cinema: { type: mongoose.Schema.Types.ObjectId, ref: 'Cinema' },
                 rewatch: Boolean
             }
         ]

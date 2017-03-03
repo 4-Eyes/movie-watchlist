@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 
 const cinemaSchema = new Schema(
     {
-        _id: { type: Number, required: true, unique: true },
         name: { type: String, required: true, unique: true },
         location: {
             latitude: Number,
