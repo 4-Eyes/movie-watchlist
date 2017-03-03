@@ -1,7 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter } from "@angular/core";
 import { Movie } from "../models/movie";
 import { Observable } from "rxjs";
 import { DataService } from "../services/data.service";
+import { MaterializeAction } from "angular2-materialize";
 
 @Component(
     {
@@ -15,5 +16,16 @@ export class WatchListComponent {
 
     constructor(private dataService: DataService) {
         this.movies = dataService.getWatchlist();
+    }
+
+    modalActions = new EventEmitter<string|MaterializeAction>();
+
+    addMovie(event): void {
+        //Add the movie/do validation
+        this.modalActions.emit({action:"modal", params:['close']});
+    }
+
+    openModal(): void {
+        this.modalActions.emit({action:"modal", params:['open']});
     }
 }

@@ -1,7 +1,7 @@
 import { Viewing } from "./viewing";
 
 export class Movie {
-    id: number;
+    _id: number;
     imdbId: string;
     title: string;
     viewings: Viewing[];

@@ -35,4 +35,18 @@ router.post('/cinemas', (req, res) => {
     });
 });
 
+router.get('/movie/:id', (req, res) => {
+    repo.getMovie(req.params.id, (err, movie) => {
+        if (err) res.send(err);
+        res.json(movie);
+    });
+});
+
+router.get('/cinema/:id', (req, res) => {
+    repo.getCinema(req.params.id, (err, cinema) => {
+        if (err) res.send(err);
+        res.json(cinema);
+    });
+});
+
 module.exports = router;

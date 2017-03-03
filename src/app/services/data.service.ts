@@ -19,6 +19,6 @@ export class DataService {
     }
 
     getMovie(movieId: number): Observable<Movie> {
-        return Observable.of<Movie>(WATCHLIST.filter(movie => movie.id === movieId).pop());
+        return Observable.of<Movie>(WATCHLIST.filter(movie => movie._id === movieId).pop());
     }
 }

@@ -13,7 +13,7 @@
                     <p>You have watched this film {{movie.viewings.length}} time{{movie.viewings.length == 1 ? "" : "s"}}</p>
                 </div>
                 <div class="card-action">
-                    <a [routerLink]="['/movie', movie.id]">Details</a>
+                    <a [routerLink]="['/movie', movie._id]">Details</a>
                     <!--<a class="btn-floating waves-effect waves-light red right"><i class="material-icons">add</i></a>-->
                 </div>
             </div>

@@ -9,8 +9,8 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap'
 
-import { Movie } from "./../models/movie";
-import { TMDBService } from "./../services/tmdb.service";
+import { Movie } from "../models/movie";
+import { TMDBService } from "../services/tmdb.service";
 
 @Component(
     {

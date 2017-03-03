@@ -16,14 +16,24 @@ class DataRepository {
 
     getCinemas(callback) {
         Cinema.find({}, callback);
-    }
+    };
 
     createMovie(data, callback) {
         Movie.create(data, callback);
-    }
+    };
 
     createCinema(data, callback) {
         Cinema.create(data, callback);
+    };
+
+    getMovie(id, callback) {
+        Movie.findById(id, callback)
+            .populate("viewings.cinema")
+            .exec(callback);
+    };
+
+    getCinema(id, callback) {
+        Cinema.findById(id, callback);
     }
 }
 
