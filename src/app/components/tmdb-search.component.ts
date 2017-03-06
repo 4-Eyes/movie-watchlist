@@ -1,4 +1,4 @@
-import { OnInit, Component } from "@angular/core";
+import { OnInit, Component, Input } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 import { Subject } from "rxjs/Subject";
 
@@ -24,7 +24,7 @@ import { TMDBService } from "../services/tmdb.service";
 export class TMDBSearchComponent implements OnInit {
     movies: Observable<Movie[]>;
     private searchTerms = new Subject<string>();
-    selectedMovie: Movie = null;
+    @Input() selectedMovie: Movie;
     selectedIndex: number = -1;
     moviesLength = 0;
     queryString: string = "";
@@ -37,12 +37,15 @@ export class TMDBSearchComponent implements OnInit {
         } else if (event.code === "ArrowUp" && this.selectedIndex > 0) {
             this.selectedIndex--;
         } else {
-            this.selectedMovie = null;
+            // this.selectedMovie = null;
             this.searchTerms.next(this.queryString);
         }
     }
 
     ngOnInit(): void {
+        if (this.selectedMovie) {
+            this.queryString = this.selectedMovie.title;
+        }
         this.searchTerms
             .debounceTime(200)
             .distinctUntilChanged()
@@ -53,9 +56,18 @@ export class TMDBSearchComponent implements OnInit {
             });
     }
 
-    select(movie: Movie, index: number): void {
+    select(movie: Movie, index: number) {
         this.queryString = movie.title;
-        this.selectedMovie = movie;
+
+        this.selectedMovie.title = movie.title;
+        this.selectedMovie._id = movie._id;
+        this.selectedMovie.imdbId = movie.imdbId;
+        this.selectedMovie.overview = movie.overview;
+        this.selectedMovie.posterUrl = movie.posterUrl;
+        this.selectedMovie.releaseDate = movie.releaseDate;
+
         this.selectedIndex = index;
+        this.moviesLength = 0;
+        this.movies = Observable.of<Movie[]>();
     }
 }

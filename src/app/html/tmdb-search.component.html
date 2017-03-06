@@ -1,9 +1,9 @@
-<div class="container">
+<!--<div class="container">-->
     <div class="input-field col s12">
         <input [(ngModel)]="queryString" type="text" id="movie-search" class="validate filter-input" (keyup)="search($event)">
         <label for="movie-search">Movie Title</label>
     </div>
-    <div class="suggestions" *ngIf="moviesLength > 0 && !selectedMovie">
+    <div class="suggestions" *ngIf="moviesLength > 0">
         <ul *ngFor="let movie of movies | async;let idx = index">
             <li [class.complete-selected]="idx == selectedIndex">
                 <a class="left-align" (click)="select(movie, idx)">
@@ -18,4 +18,4 @@
             </li>
         </ul>
     </div>
-</div>
+<!--</div>-->

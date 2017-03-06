@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
 import 'rxjs/add/observable/of';
 
 import { WATCHLIST } from "./data";
-import {Cinema} from "../models/cinema";
+import { Cinema } from "../models/cinema";
 
 @Injectable()
 export class DataService {
@@ -15,7 +15,7 @@ export class DataService {
 
     constructor(private http: Http, private util: UtilityService) {
         if (this.init) {
-            this.populateDB()
+            this.populateDB();
             this.init = false;
         }
     }
@@ -30,6 +30,12 @@ export class DataService {
                 }
                 return res;
             });
+    }
+
+    getCinemas(): Observable<Cinema[]> {
+        return this.http
+            .get(this.apiUrl + "cinemas")
+            .map((cinemas: any) => cinemas.json() as Cinema[])
     }
 
     getMovie(movieId: number): Observable<Movie> {

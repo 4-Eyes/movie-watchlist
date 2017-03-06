@@ -1,0 +1,27 @@
+<!--<div class="container">-->
+    <div>
+        <!--<h6>Viewing {{viewingNo}}</h6>-->
+        <div class="divider row"></div>
+        <div class="row">
+            <div class="valign-wrapper">
+                <div class="col s6 valign">
+                    <div class="switch">
+                        <label>
+                            N/A
+                            <input [(ngModel)]="atCinema" type="checkbox">
+                            <span class="lever"></span>
+                            At Cinema
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="atCinema" class="input-field col s6">
+                    <select materialize="material_select" [(ngModel)]="viewing.cinema">
+                        <option value="" disabled selected>Choose a cinema</option>
+                        <option *ngFor="let cinema of cinemas | async" [ngValue]="cinema">{{cinema.name}}</option>
+                    </select>
+                    <label>Cinema Select</label>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--</div>-->

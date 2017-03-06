@@ -16,23 +16,27 @@ import { UtilityService } from "./services/utility.service";
 import { TMDBService } from "./services/tmdb.service";
 import { DataService } from "./services/data.service";
 import { AppRoutingModule } from "./routing/app-routing.module";
+import { MovieEditComponent } from "./components/movie-edit.component";
+import { ViewingEditComponent } from "./components/viewing-edit.component";
 
 @NgModule(
     {
         declarations: [
             AppComponent,
-            MovieComponent,
-            MovieDetailComponent,
-            WatchListComponent,
-            StatsComponent,
-            TMDBSearchComponent
+            // MovieComponent,
+            // MovieDetailComponent,
+            // WatchListComponent,
+            // StatsComponent,
+            TMDBSearchComponent,
+            MovieEditComponent,
+            ViewingEditComponent
         ],
         imports: [
             BrowserModule,
             FormsModule,
             HttpModule,
             MaterializeModule,
-            AppRoutingModule
+            // AppRoutingModule
         ],
         providers: [
             UtilityService,
