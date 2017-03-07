@@ -18,19 +18,7 @@ export class ViewingEditComponent implements OnInit {
     atCinema = false;
 
     constructor(private dataService: DataService) {
-        // this.cinemas = dataService.getCinemas();
-        this.cinemas = Observable.of<Cinema[]>(
-            [
-                {
-                    _id: 0,
-                    name: "Readings The Palms",
-                    location: {
-                        latitude: 0,
-                        longitude: 0,
-                    }
-                }
-            ]
-        )
+        this.cinemas = dataService.getCinemas();
     }
 
     ngOnInit(): void {

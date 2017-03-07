@@ -5,9 +5,11 @@ import { Movie } from "../models/movie";
 import { Observable } from "rxjs";
 import "rxjs/add/observable/of";
 import { Cinema } from "../models/cinema";
+import { IDataService } from "./data-service.interface";
 
 @Injectable()
-export class DataService {
+export class DataService implements IDataService {
+
     private apiUrl = "http://localhost:3000/api/";
 
     constructor(private http: Http, private util: UtilityService) {
@@ -45,5 +47,25 @@ export class DataService {
     createCinema(cinema: Cinema): Observable<any> {
         return this.http
             .post(this.apiUrl + "cinemas", cinema);
+    }
+
+    getCinema(cinemaId: number): Observable<Cinema> {
+        return undefined;
+    }
+
+    updateMovie(movieId: number, movie: Movie): Observable<any> {
+        return undefined;
+    }
+
+    updateCinema(cinemaId: number, cinema: Cinema): Observable<any> {
+        return undefined;
+    }
+
+    deleteMovie(cinemaId: number): Observable<any> {
+        return undefined;
+    }
+
+    deleteCinema(cinemaId: number): Observable<any> {
+        return undefined;
     }
 }

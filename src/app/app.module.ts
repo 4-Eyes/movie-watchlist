@@ -15,6 +15,7 @@ import { DataService } from "./services/data.service";
 import { AppRoutingModule } from "./routing/app-routing.module";
 import { MovieEditComponent } from "./components/movie-edit.component";
 import { ViewingEditComponent } from "./components/viewing-edit.component";
+import { LoggerService } from "./services/logger.service";
 
 @NgModule(
     {
@@ -38,7 +39,8 @@ import { ViewingEditComponent } from "./components/viewing-edit.component";
         providers: [
             UtilityService,
             TMDBService,
-            DataService
+            { provide: DataService, useClass: DataService }, // TODO swap this out for DataService when api testing and releasing for production
+            LoggerService
         ],
         bootstrap: [AppComponent]
     }
