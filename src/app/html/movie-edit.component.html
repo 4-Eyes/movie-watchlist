@@ -1,19 +1,19 @@
 <div class="container">
-    <div class="row">
-        <h4>Edit movie</h4>
-        <form>
-            <div class="row section">
-                <tmdb-search [selectedMovie]="movie"></tmdb-search>
+    <div>
+        <h4 class="row section">Edit movie</h4>
+        <!--<form>-->
+        <div class="row section">
+            <tmdb-search [selectedMovie]="movie"></tmdb-search>
+        </div>
+        <div class="section">
+            <div class="valign-wrapper row">
+                <h5 class="left-align valign col s6">Viewings</h5>
+                <a class="waves-effect waves-light btn valign right col s2 offset-s4">Add Viewing</a>
             </div>
-            <div class="section">
-                <div class="valign-wrapper row">
-                    <h5 class="left-align valign col s6">Viewings</h5>
-                    <a class="waves-effect waves-light btn valign right col s2 offset-s4">Add Viewing</a>
-                </div>
-                <div *ngFor="let viewing of movie.viewings; let idx = index">
-                    <viewing-edit [viewing]="viewing" [viewingNo]="idx + 1"></viewing-edit>
-                </div>
+            <div *ngFor="let viewing of movie.viewings; let idx = index">
+                <viewing-edit [viewing]="viewing" [viewingNo]="idx + 1"></viewing-edit>
             </div>
-        </form>
+        </div>
+        <!--</form>-->
     </div>
 </div>
