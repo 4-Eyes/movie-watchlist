@@ -1,17 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 import { MaterializeModule } from "angular2-materialize";
-
-import { AppComponent } from './components/app.component';
+import { AppComponent } from "./components/app.component";
 import { TMDBSearchComponent } from "./components/tmdb-search.component";
 import { MovieDetailComponent } from "./components/movie-detail.component";
 import { WatchListComponent } from "./components/watchlist.component";
 import { StatsComponent } from "./components/stats.component";
-import { MovieComponent }from './components/movie.component';
-
+import { MovieComponent } from "./components/movie.component";
 import { UtilityService } from "./services/utility.service";
 import { TMDBService } from "./services/tmdb.service";
 import { DataService } from "./services/data.service";
@@ -23,10 +20,10 @@ import { ViewingEditComponent } from "./components/viewing-edit.component";
     {
         declarations: [
             AppComponent,
-            // MovieComponent,
-            // MovieDetailComponent,
-            // WatchListComponent,
-            // StatsComponent,
+            MovieComponent,
+            MovieDetailComponent,
+            WatchListComponent,
+            StatsComponent,
             TMDBSearchComponent,
             MovieEditComponent,
             ViewingEditComponent
@@ -36,7 +33,7 @@ import { ViewingEditComponent } from "./components/viewing-edit.component";
             FormsModule,
             HttpModule,
             MaterializeModule,
-            // AppRoutingModule
+            AppRoutingModule
         ],
         providers: [
             UtilityService,

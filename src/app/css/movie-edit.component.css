@@ -1,0 +1,10 @@
+.delete-button {
+    height: 30px;
+    padding: 0px;
+    margin: 6px 0px;
+}
+
+.delete-button i {
+    width: inherit;
+    margin: -5px 5px;
+}

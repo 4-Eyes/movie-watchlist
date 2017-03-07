@@ -1,10 +1,12 @@
 import { Component, Input } from "@angular/core";
 import { Movie } from "../models/movie";
+import { Viewing } from "../models/viewing";
 @Component(
     {
         moduleId: module.id,
         selector: 'movie-edit',
-        templateUrl: './../html/movie-edit.component.html'
+        templateUrl: './../html/movie-edit.component.html',
+        styleUrls: ['./../css/movie-edit.component.css']
     }
 )
 export class MovieEditComponent {
@@ -19,20 +21,18 @@ export class MovieEditComponent {
             posterUrl: "/dlIPGXPxXQTp9kFrRzn0RsfUelx.jpg",
             title: "Captain America: The First Avenger",
             viewings: [
-                {
-                    id: 0,
-                    date: new Date("2016-07-21"),
-                    cinema: {
-                        _id: 0,
-                        name: "Readings The Palms",
-                        location: {
-                            latitude: 0,
-                            longitude: 0,
-                        }
-                    },
-                    rewatch: false
-                },
             ]
+        }
+    }
+
+    addViewing(): void {
+        this.movie.viewings.push(new Viewing)
+    }
+
+    deleteViewing(viewing: Viewing): void {
+        let index = this.movie.viewings.indexOf(viewing);
+        if (index > -1) {
+            this.movie.viewings.splice(index, 1);
         }
     }
 }

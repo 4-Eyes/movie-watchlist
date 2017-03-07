@@ -11,11 +11,11 @@
 <div id="addMovieModal" class="modal modal-fixed-footer" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
     <div class="modal-content">
         <h4>Add New Movie</h4>
-        <p>Make the proper form here</p>
+        <movie-edit [movie]="newMovie"></movie-edit>
     </div>
     <div class="modal-footer">
         <a class="waves-effect waves-green btn-flat" (click)="addMovie()">Add</a>
-        <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+        <a class="modal-action modal-close waves-effect waves-red btn-flat" (click)="cancelAdd()">Cancel</a>
     </div>
 </div>
 

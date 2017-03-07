@@ -8,12 +8,12 @@ import { DataService } from "../services/data.service";
     {
         moduleId: module.id,
         selector: 'viewing-edit',
-        templateUrl: './../html/viewing-edit.component.html'
+        templateUrl: './../html/viewing-edit.component.html',
+        styleUrls: ['./../css/viewing-edit.component.css']
     }
 )
 export class ViewingEditComponent implements OnInit {
     @Input() viewing: Viewing;
-    @Input() viewingNo: number;
     cinemas: Observable<Cinema[]>;
     atCinema = false;
 

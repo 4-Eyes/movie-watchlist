@@ -1,19 +1,27 @@
 <div class="container">
     <div>
-        <h4 class="row section">Edit movie</h4>
-        <!--<form>-->
+        <!--<h4 class="row section">Edit movie</h4>-->
         <div class="row section">
             <tmdb-search [selectedMovie]="movie"></tmdb-search>
         </div>
-        <div class="section">
-            <div class="valign-wrapper row">
-                <h5 class="left-align valign col s6">Viewings</h5>
-                <a class="waves-effect waves-light btn valign right col s2 offset-s4">Add Viewing</a>
+        <div class="row section">
+            <div class="valign-wrapper">
+                <h5 class="left-align valign col s6 no-padding">Viewings</h5>
+                <a class="waves-effect waves-light btn valign right col s2 offset-s4" (click)="addViewing()">Add
+                    Viewing</a>
             </div>
-            <div *ngFor="let viewing of movie.viewings; let idx = index">
-                <viewing-edit [viewing]="viewing" [viewingNo]="idx + 1"></viewing-edit>
-            </div>
+            <ul *ngIf="movie.viewings.length > 0" materialize="collapsible" class="collapsible"
+                data-collapsible="accordion">
+                <li *ngFor="let viewing of movie.viewings; let idx = index">
+                    <div class="collapsible-header">{{"Viewing " + (idx + 1) + " - " + viewing.date}}
+                        <a class="btn waves-effect waves-teal right delete-button"
+                           (click)="deleteViewing(viewing); $event.stopPropagation()">
+                            <i class="material-icons">clear</i>
+                        </a>
+                    </div>
+                    <viewing-edit class="collapsible-body" [viewing]="viewing"></viewing-edit>
+                </li>
+            </ul>
         </div>
-        <!--</form>-->
     </div>
 </div>

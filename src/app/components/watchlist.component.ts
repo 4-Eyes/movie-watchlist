@@ -13,6 +13,7 @@ import { MaterializeAction } from "angular2-materialize";
 )
 export class WatchListComponent {
     movies: Observable<Movie[]>;
+    newMovie: Movie = new Movie();
 
     constructor(private dataService: DataService) {
         this.movies = dataService.getWatchlist();
@@ -27,5 +28,9 @@ export class WatchListComponent {
 
     openModal(): void {
         this.modalActions.emit({action:"modal", params:['open']});
+    }
+
+    cancelAdd(): void {
+        this.newMovie = new Movie();
     }
 }

@@ -8,3 +8,11 @@
 .top-nav {
     background-color: #00acc1;
 }
+
+.no-padding {
+    padding: 0;
+}
+
+.not-visible {
+    visibility: hidden;
+}

@@ -4,7 +4,7 @@ export class Movie {
     _id: number;
     imdbId: string;
     title: string;
-    viewings: Viewing[];
+    viewings: Viewing[] = [];
     posterUrl: string;
     releaseDate: Date;
     overview: string;

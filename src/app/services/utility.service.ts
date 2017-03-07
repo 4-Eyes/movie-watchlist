@@ -1,11 +1,10 @@
 import { Injectable } from "@angular/core";
 import { Movie } from "../models/movie";
 import { Http } from "@angular/http";
-
-import 'rxjs/add/operator/toPromise';
+import "rxjs/add/operator/toPromise";
 import { Observable } from "rxjs";
 import { TMDBConfig } from "../models/tmdb-config";
-import {Cinema} from "../models/cinema";
+import { Cinema } from "../models/cinema";
 
 @Injectable()
 export class UtilityService {
@@ -44,8 +43,11 @@ export class UtilityService {
 
     movieToApi(movie: Movie): any {
         let api = this.clone(movie);
-        for (var viewing of api.viewings) {
+        for (let viewing of api.viewings) {
             viewing.cinema = viewing.cinema._id;
+            delete viewing.date;
+            viewing.date = viewing._date;
+            delete viewing._date;
         }
         return api;
     }
