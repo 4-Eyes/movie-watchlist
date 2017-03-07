@@ -16,6 +16,7 @@ import { AppRoutingModule } from "./routing/app-routing.module";
 import { MovieEditComponent } from "./components/movie-edit.component";
 import { ViewingEditComponent } from "./components/viewing-edit.component";
 import { LoggerService } from "./services/logger.service";
+import { DummyDataService } from "./services/dummy-data.service";
 
 @NgModule(
     {
@@ -39,7 +40,7 @@ import { LoggerService } from "./services/logger.service";
         providers: [
             UtilityService,
             TMDBService,
-            { provide: DataService, useClass: DataService }, // TODO swap this out for DataService when api testing and releasing for production
+            { provide: DataService, useClass: DummyDataService }, // TODO swap this out for DataService when api testing and releasing for production
             LoggerService
         ],
         bootstrap: [AppComponent]
