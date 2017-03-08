@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from "@angular/core";
+import { Component, EventEmitter, OnInit } from "@angular/core";
 import { Movie } from "../models/movie";
 import { Observable } from "rxjs";
 import { DataService } from "../services/data.service";
@@ -11,12 +11,15 @@ import { MaterializeAction } from "angular2-materialize";
         templateUrl: './../html/watchlist.component.html'
     }
 )
-export class WatchListComponent {
+export class WatchListComponent implements OnInit {
     movies: Observable<Movie[]>;
     newMovie: Movie = new Movie();
 
     constructor(private dataService: DataService) {
-        this.movies = dataService.getWatchlist();
+    }
+
+    ngOnInit(): void {
+        this.movies = this.dataService.getWatchlist();
     }
 
     modalActions = new EventEmitter<string|MaterializeAction>();

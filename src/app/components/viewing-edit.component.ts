@@ -18,10 +18,10 @@ export class ViewingEditComponent implements OnInit {
     atCinema = false;
 
     constructor(private dataService: DataService) {
-        this.cinemas = dataService.getCinemas();
     }
 
     ngOnInit(): void {
+        this.cinemas = this.dataService.getCinemas();
         if (this.viewing.cinema) {
             this.atCinema = true;
         }
