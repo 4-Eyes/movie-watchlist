@@ -3,13 +3,17 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class LoggerService {
 
-    log(message: string, errorClass?: any, errorMethod?: string) {
+    log(message: string) {
+        console.log(message);
+    }
+
+    error(message: string, errorClass?: any, errorMethod?: string) {
         if (errorClass) {
-            console.log(`An error occurred in ${errorClass.instance.name}.`);
+            console.error(`An error occurred in ${errorClass.instance.name}.`);
         }
         if (errorMethod) {
-            console.log(`This happened in the method ${errorMethod}`);
+            console.error(`This happened in the method ${errorMethod}`);
         }
-        console.log(message);
+        console.error(message);
     }
 }

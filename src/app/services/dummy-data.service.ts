@@ -23,7 +23,7 @@ export class DummyDataService implements IDataService {
     getMovie(movieId: number): Observable<Movie> {
         let res = MOVIES.filter((movie) => movie._id == movieId);
         if (res.length == 0) {
-            this.loggerService.log(
+            this.loggerService.error(
                 `Error in getting movie with given id - ${movieId}. Movie does not exist.`,
                 this, "getMovie");
             return Observable.of<Movie>();
@@ -34,7 +34,7 @@ export class DummyDataService implements IDataService {
     getCinema(cinemaId: number): Observable<Cinema> {
         let res = CINEMAS.filter((movie) => movie._id == cinemaId);
         if (res.length == 0) {
-            this.loggerService.log(
+            this.loggerService.error(
                 `Error in getting cinema with given id - ${cinemaId}. Cinema does not exist.`,
                 this, "getCinema");
             return Observable.of<Cinema>();
