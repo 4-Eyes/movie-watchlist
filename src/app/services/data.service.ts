@@ -7,7 +7,6 @@ import "rxjs/add/observable/of";
 import { Cinema } from "../models/cinema";
 import { IDataService } from "./data-service.interface";
 import { LoggerService } from "./logger.service";
-import { logger } from "codelyzer/util/logger";
 
 @Injectable()
 export class DataService implements IDataService {
