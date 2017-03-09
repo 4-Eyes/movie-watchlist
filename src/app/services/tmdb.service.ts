@@ -7,6 +7,7 @@ import { Movie } from "../models/movie";
 import 'rxjs/add/operator/map';
 import { UtilityService } from "./utility.service";
 import { TMDBConfig } from "../models/tmdb-config";
+import { LoggerService } from "./logger.service";
 
 @Injectable()
 export class TMDBService {
@@ -14,7 +15,9 @@ export class TMDBService {
     private defaultQueryParams: URLSearchParams = new URLSearchParams();
     public tmdbConfig: TMDBConfig;
 
-    constructor(private http: Http, private util: UtilityService) {
+    constructor(private http: Http,
+                private util: UtilityService,
+                private loggerService: LoggerService) {
         this.util.loadJson("./config.json")
             .subscribe(configData => {
                 this.defaultQueryParams.set("api_key", configData.tmdbApiKey);
@@ -58,6 +61,11 @@ export class TMDBService {
 
     generatePosterUrl(movie: Movie, posterSize: number): string {
         if (!this.tmdbConfig) return;
-        return this.tmdbConfig.imageBaseUrl + this.tmdbConfig.posterSizes[posterSize] + movie.posterUrl
+        if (Math.abs(posterSize) >= this.tmdbConfig.posterSizes.length) {
+            this.loggerService.log("Tried to get a poster size outside of available sizes")
+        }
+        return this.tmdbConfig.imageBaseUrl +
+            this.tmdbConfig.posterSizes[(posterSize >= 0 ? posterSize : (this.tmdbConfig.posterSizes.length + posterSize))] +
+            movie.posterUrl;
     }
 }

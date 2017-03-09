@@ -1,3 +1,20 @@
-<div>
-    <label>{{movie?.title}}</label>
+<div class="container">
+    <div class="row">
+        <div class="section">
+            <div class="col s3">
+                <img materialize="materialbox" class="materialboxed" *ngIf="movie.posterUrl && tmdbService.generatePosterUrl(movie, -1)" src="{{tmdbService.generatePosterUrl(movie, -1)}}">
+                <div *ngIf="!movie.posterUrl || !tmdbService.generatePosterUrl(movie, -1)" class="no-image">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col s9">
+                <h4>{{movie?.title}} ({{movie.releaseDate.getFullYear()}})</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col 12">
+            <p>{{movie.overview}}</p>
+        </div>
+    </div>
 </div>

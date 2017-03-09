@@ -3,13 +3,15 @@ import { Movie } from "./../models/movie";
 import { TMDBService } from "./../services/tmdb.service";
 import { ActivatedRoute, Params } from "@angular/router";
 import { DataService } from "../services/data.service";
-import {Observable} from "rxjs";
+import { MaterializeDirective } from "angular2-materialize";
+import { Observable } from "rxjs";
 
 @Component(
     {
         moduleId: module.id,
         selector: 'movie-detail',
-        templateUrl: './../html/movie-detail.component.html'
+        templateUrl: './../html/movie-detail.component.html',
+        styleUrls: ['./../css/movie-detail.component.css']
     }
 )
 export class MovieDetailComponent implements OnInit {
@@ -17,8 +19,9 @@ export class MovieDetailComponent implements OnInit {
     editMode = false;
 
     constructor(private tmdbService: TMDBService,
-    private route: ActivatedRoute,
-    private dataService: DataService) {}
+                private route: ActivatedRoute,
+                private dataService: DataService) {
+    }
 
     ngOnInit(): void {
         this.route.params

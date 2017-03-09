@@ -10,7 +10,7 @@
                 <a class="waves-effect waves-light btn valign right col s2 offset-s4" (click)="addViewing()">Add
                     Viewing</a>
             </div>
-            <ul *ngIf="movie.viewings.length > 0" materialize="collapsible" class="collapsible"
+            <ul *ngIf="movie.viewings?.length > 0" materialize="collapsible" class="collapsible"
                 data-collapsible="accordion">
                 <li *ngFor="let viewing of movie.viewings; let idx = index">
                     <div class="collapsible-header">{{"Viewing " + (idx + 1) + " - " + viewing.date}}

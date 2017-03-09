@@ -10,7 +10,7 @@
             <div class="card-stacked">
                 <div class="card-content">
                     <span class="card-title">{{movie.title}} ({{movie.releaseDate.getFullYear()}})</span>
-                    <p>You have watched this film {{movie.viewings.length}} time{{movie.viewings.length == 1 ? "" : "s"}}</p>
+                    <p>You have watched this film {{movie.viewings ? movie.viewings.length: 0}} time{{movie.viewings?.length == 1 ? "" : "s"}}</p>
                 </div>
                 <div class="card-action">
                     <a [routerLink]="['/movie', movie._id]">Details</a>
