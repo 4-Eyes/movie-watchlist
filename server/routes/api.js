@@ -3,108 +3,56 @@ const router = express.Router();
 const DataRepository = require("./../repositories/data-repository");
 const repo = new DataRepository();
 
+const handleResponse = (err, object, res) => {
+    if (err) {
+        res.send(err);
+        return;
+    }
+    res.json(object);
+};
+
 router.get('/', (req, res) => {
     res.send('This is the api');
 });
 
 router.get('/movies', (req, res) => {
-    repo.getMovies((err, movies) => {
-        if (err) {
-            res.send(err);
-            return;
-        }
-        res.json(movies);
-    });
+    repo.getMovies((err, movies) => handleResponse(err, movies, res));
 });
 
 router.get('/cinemas', (req, res) => {
-    repo.getCinemas((err, cinemas) => {
-        if (err) {
-            res.send(err);
-            return;
-        }
-        res.json(cinemas);
-    });
+    repo.getCinemas((err, cinemas) => handleResponse(err, cinemas, res));
 });
 
 router.post('/movies', (req, res) => {
-    repo.createMovie(req.body, (err, response) => {
-        if (err) {
-            res.send(err);
-            return;
-        }
-        res.json(response);
-    });
+    repo.createMovie(req.body, (err, movie) => handleResponse(err, movie, res));
 });
 
 router.post('/cinemas', (req, res) => {
-    repo.createCinema(req.body, (err, response) => {
-        if (err) {
-            res.send(err);
-            return;
-        }
-        res.json(response);
-    });
+    repo.createCinema(req.body, (err, cinema) => handleResponse(err, cinema, res));
 });
 
 router.get('/movie/:id', (req, res) => {
-    repo.getMovie(req.params.id, (err, movie) => {
-        if (err) {
-            res.send(err);
-            return;
-        }
-        res.json(movie);
-    });
+    repo.getMovie(req.params.id, (err, movie) => handleResponse(err, movie, res));
 });
 
 router.get('/cinema/:id', (req, res) => {
-    repo.getCinema(req.params.id, (err, cinema) => {
-        if (err) {
-            res.send(err);
-            return;
-        }
-        res.json(cinema);
-    });
+    repo.getCinema(req.params.id, (err, cinema) => handleResponse(err, cinema, res));
 });
 
 router.put('/movie/:id', (req, res) => {
-    repo.updateMovie(req.params.id, req.body, (err, movie) => {
-        if (err) {
-            req.send(err);
-            return;
-        }
-        res.json(movie);
-    });
+    repo.updateMovie(req.params.id, req.body, (err, movie) => handleResponse(err, movie, res));
 });
 
 router.put('/cinema/:id', (req, res) => {
-    repo.updateCinema(req.params.id, req.body, (err, cinema) => {
-        if (err) {
-            req.send(err);
-            return;
-        }
-        res.json(cinema);
-    });
+    repo.updateCinema(req.params.id, req.body, (err, cinema) => handleResponse(err, cinema, res));
 });
 
 router.delete('/movie/:id', (req, res) => {
-    repo.deleteMovie(req.params.id, req.body, (err, movie) => {
-        if (err) {
-            req.send(err);
-            return;
-        }
-        res.json(movie);
-    })
+    repo.deleteMovie(req.params.id, req.body, (err, movie) => handleResponse(err, movie, res));
 });
 
 router.delete('/cinema/:id', (req, res) => {
-    repo.deleteCinema(req.params.id, req.body, (err, cinema) => {
-        if (err) {
-            req.send(err);
-            return;
-        }
-        res.json(cinema);
-    })
+    repo.deleteCinema(req.params.id, req.body, (err, cinema) => handleResponse(err, cinema, res));
 });
 
 module.exports = router;
